@@ -8,6 +8,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		print(direction)
+	var left_stick = Vector2(
+		Input.get_axis("left_stick_left", "left_stick_right"),
+		Input.get_axis("left_stick_up", "left_stick_down")
+	)
+	if left_stick:
+		print(left_stick)
