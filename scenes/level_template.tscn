@@ -15,11 +15,17 @@ size = Vector3(50, 1, 50)
 transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267, -0.92794, 1.42122, 5.61001)
 
 [node name="Player" parent="." instance=ExtResource("1_iqs33")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.7318, 0)
-rotation_strength = 1.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.39371, 0)
+rotation_strength = 10.0
 
 [node name="Arm2" parent="Player" index="1"]
-transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-0.999996, -0.00290859, -0.000747362, 0.002909, -0.999996, -0.000556541, -0.000745746, -0.000558706, 1, 0, 0, 0)
+
+[node name="PinJoint3D" parent="Player/Arm2" index="0"]
+node_a = NodePath("../../BodyBody")
+
+[node name="PinJoint3D" parent="Player/Arm1" index="0"]
+node_a = NodePath("../../BodyBody")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
