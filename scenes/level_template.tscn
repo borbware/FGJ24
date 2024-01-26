@@ -16,6 +16,10 @@ transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267
 
 [node name="Player" parent="." instance=ExtResource("1_iqs33")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.7318, 0)
+rotation_strength = 1.0
+
+[node name="Arm2" parent="Player" index="1"]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -33,3 +37,8 @@ transform = Transform3D(1, 0, 0, 0, 0.28425, 0.95875, 0, -0.95875, 0.28425, 0, 4
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_i0m2m")
 autoplay = true
+
+[editable path="Player"]
+[editable path="Player/Arm2"]
+[editable path="Player/Arm2/ArmBody"]
+[editable path="Player/Arm1"]
