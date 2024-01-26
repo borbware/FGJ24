@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://usfq5ar7em4i"]
+
+[ext_resource type="PackedScene" uid="uid://rtjleiuxpshc" path="res://scenes/arm_body.tscn" id="1_3evab"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jk65a"]
+
+[node name="Player" type="Node3D"]
+
+[node name="BodyBody" type="RigidBody3D" parent="."]
+transform = Transform3D(0.999909, 0, 0, 0, 0.999909, 0, 0, 0, 0.999909, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BodyBody"]
+shape = SubResource("SphereShape3D_jk65a")
+
+[node name="BodyModel" type="CSGSphere3D" parent="BodyBody"]
+
+[node name="Generic6DOFJoint3D" type="Generic6DOFJoint3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.450673, 0.047684, -0.112836)
+node_a = NodePath("../BodyBody")
+node_b = NodePath("../ArmBody")
+
+[node name="Generic6DOFJoint3D2" type="Generic6DOFJoint3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.901347, 0.0953679, -0.225673)
+node_a = NodePath("../ArmBody2")
+node_b = NodePath("../ArmBody")
+
+[node name="ArmBody" parent="." instance=ExtResource("1_3evab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98874, 0, 0)
+
+[node name="ArmBody2" parent="." instance=ExtResource("1_3evab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00958, 0, 0)
