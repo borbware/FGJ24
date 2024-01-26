@@ -8,4 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var direction = Input.get_axis("ui_left", "ui_right")
+	if direction:
+		print(direction)

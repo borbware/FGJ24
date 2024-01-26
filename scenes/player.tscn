@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://usfq5ar7em4i"]
 
-[ext_resource type="PackedScene" uid="uid://rtjleiuxpshc" path="res://scenes/arm_body.tscn" id="1_3evab"]
 [ext_resource type="Script" path="res://scenes/player_movement.gd" id="1_44f4q"]
+[ext_resource type="PackedScene" uid="uid://dpfk1ln8o4dan" path="res://scenes/arm.tscn" id="2_p4n8q"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jk65a"]
 
@@ -16,18 +16,17 @@ shape = SubResource("SphereShape3D_jk65a")
 
 [node name="BodyModel" type="CSGSphere3D" parent="BodyBody"]
 
-[node name="Generic6DOFJoint3D" type="Generic6DOFJoint3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.450673, 0.047684, -0.112836)
-node_a = NodePath("../BodyBody")
-node_b = NodePath("../ArmBody")
+[node name="Arm2" parent="." instance=ExtResource("2_p4n8q")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Generic6DOFJoint3D2" type="Generic6DOFJoint3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.901347, 0.0953679, -0.225673)
-node_a = NodePath("../ArmBody2")
-node_b = NodePath("../ArmBody")
+[node name="Generic6DOFJoint3D" parent="Arm2" index="1"]
+node_a = NodePath("../../BodyBody")
 
-[node name="ArmBody" parent="." instance=ExtResource("1_3evab")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98874, 0, 0)
+[node name="Arm1" parent="." instance=ExtResource("2_p4n8q")]
 
-[node name="ArmBody2" parent="." instance=ExtResource("1_3evab")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00958, 0, 0)
+[node name="Generic6DOFJoint3D" parent="Arm1" index="1"]
+node_a = NodePath("../../BodyBody")
+
+[editable path="Arm2"]
+[editable path="Arm2/ArmBody"]
+[editable path="Arm1"]
