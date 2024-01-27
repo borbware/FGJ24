@@ -8,7 +8,7 @@
 [node name="Player" type="Node3D"]
 script = ExtResource("1_44f4q")
 
-[node name="BodyBody" type="StaticBody3D" parent="."]
+[node name="BodyBody" type="RigidBody3D" parent="."]
 transform = Transform3D(0.999909, 0, 0, 0, 0.999909, 0, 0, 0, 0.999909, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BodyBody"]
@@ -16,11 +16,24 @@ shape = SubResource("SphereShape3D_jk65a")
 
 [node name="BodyModel" type="CSGSphere3D" parent="BodyBody"]
 
-[node name="Arm2" parent="." instance=ExtResource("2_p4n8q")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+[node name="LeftShoulder" type="Node3D" parent="BodyBody"]
+transform = Transform3D(1.00009, 0, 0, 0, 1.00009, 0, 0, 0, 1.00009, -0.500046, 0, 0)
 
-[node name="Arm1" parent="." instance=ExtResource("2_p4n8q")]
+[node name="RightShoulder" type="Node3D" parent="BodyBody"]
+transform = Transform3D(1.00009, 0, 0, 0, 1.00009, 0, 0, 0, 1.00009, 0.500046, 0, 0)
 
-[editable path="Arm2"]
-[editable path="Arm2/ArmBody"]
-[editable path="Arm1"]
+[node name="LeftArm" parent="BodyBody" instance=ExtResource("2_p4n8q")]
+transform = Transform3D(-1.00009, 8.74308e-08, 0, -8.74308e-08, -1.00009, 0, 0, 0, 1.00009, 0, 0, 0)
+
+[node name="BodyJoint" parent="BodyBody/LeftArm" index="1"]
+node_a = NodePath("../..")
+
+[node name="RightArm" parent="BodyBody" instance=ExtResource("2_p4n8q")]
+transform = Transform3D(1.00009, 0, 0, 0, 1.00009, 0, 0, 0, 1.00009, 0, 0, 0)
+
+[node name="BodyJoint" parent="BodyBody/RightArm" index="1"]
+node_a = NodePath("../..")
+
+[editable path="BodyBody/LeftArm"]
+[editable path="BodyBody/LeftArm/ArmBody"]
+[editable path="BodyBody/RightArm"]
