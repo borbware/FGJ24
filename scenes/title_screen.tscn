@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5gcpygm627qs"]
+
+[ext_resource type="Script" path="res://scenes/StartTextureButton.gd" id="1_63ab8"]
+[ext_resource type="Texture2D" uid="uid://dae7d2h3tetvx" path="res://assets/title-screen/name.png" id="1_mbgha"]
+[ext_resource type="Texture2D" uid="uid://dasrdtos0nbwx" path="res://assets/title-screen/start.png" id="2_0bouj"]
+[ext_resource type="AudioStream" uid="uid://bg7tm1hajmcia" path="res://assets/sound-fx/FGJ24-startgame-v1.mp3" id="3_ivg8v"]
+[ext_resource type="Texture2D" uid="uid://cd2atuhxc0exj" path="res://assets/title-screen/quit.png" id="3_tav55"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 335.0
+offset_right = 862.0
+offset_bottom = 662.0
+texture_normal = ExtResource("2_0bouj")
+script = ExtResource("1_63ab8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/StartButton"]
+stream = ExtResource("3_ivg8v")
+
+[node name="Name" type="Sprite2D" parent="."]
+position = Vector2(580, 177)
+scale = Vector2(0.723081, 0.723081)
+texture = ExtResource("1_mbgha")
+
+[node name="Quit" type="Sprite2D" parent="."]
+position = Vector2(1000, 552)
+scale = Vector2(0.507971, 0.507971)
+texture = ExtResource("3_tav55")
