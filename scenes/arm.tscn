@@ -4,13 +4,13 @@
 
 [node name="Arm1" type="Node3D"]
 
-[node name="Generic6DOFJoint3D2" type="ConeTwistJoint3D" parent="."]
+[node name="BodyJoint" type="ConeTwistJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
-node_a = NodePath("../ArmBody2")
 node_b = NodePath("../ArmBody")
 
-[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="."]
+[node name="ArmsJoint" type="ConeTwistJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+node_a = NodePath("../ArmBody2")
 node_b = NodePath("../ArmBody")
 
 [node name="ArmBody" parent="." instance=ExtResource("1_xqvm1")]
