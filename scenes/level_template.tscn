@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxt60620luavk"]
+[gd_scene load_steps=6 format=3 uid="uid://bxt60620luavk"]
 
 [ext_resource type="PackedScene" uid="uid://usfq5ar7em4i" path="res://scenes/player.tscn" id="1_iqs33"]
 [ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="2_i0m2m"]
+[ext_resource type="PackedScene" uid="uid://dyefvl1qnwjdp" path="res://scenes/humanmodel.tscn" id="3_sow8x"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_66js6"]
 size = Vector2(50, 50)
@@ -16,16 +17,11 @@ transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267
 
 [node name="Player" parent="." instance=ExtResource("1_iqs33")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.39371, 0)
+visible = false
 rotation_strength = 10.0
 
 [node name="Arm2" parent="Player" index="1"]
 transform = Transform3D(-0.999996, -0.00290859, -0.000747362, 0.002909, -0.999996, -0.000556541, -0.000745746, -0.000558706, 1, 0, 0, 0)
-
-[node name="PinJoint3D" parent="Player/Arm2" index="0"]
-node_a = NodePath("../../BodyBody")
-
-[node name="PinJoint3D" parent="Player/Arm1" index="0"]
-node_a = NodePath("../../BodyBody")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -43,6 +39,9 @@ transform = Transform3D(1, 0, 0, 0, 0.28425, 0.95875, 0, -0.95875, 0.28425, 0, 4
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_i0m2m")
 autoplay = true
+
+[node name="ego" parent="." instance=ExtResource("3_sow8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.235643, 1.50656, 1.99406)
 
 [editable path="Player"]
 [editable path="Player/Arm2"]

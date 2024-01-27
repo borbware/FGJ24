@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ua8jb3ttuk1w"]
+
+[ext_resource type="Script" path="res://scenes/player_movement.gd" id="1_olnff"]
+[ext_resource type="PackedScene" uid="uid://dpfk1ln8o4dan" path="res://scenes/arm.tscn" id="2_271xi"]
+[ext_resource type="PackedScene" uid="uid://d3kgc67mlq35d" path="res://assets/ego.glb" id="3_qx6eo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jk65a"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_olnff")
+
+[node name="BodyBody" type="StaticBody3D" parent="."]
+transform = Transform3D(0.999909, 0, 0, 0, 0.999909, 0, 0, 0, 0.999909, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BodyBody"]
+shape = SubResource("SphereShape3D_jk65a")
+
+[node name="BodyModel" type="CSGSphere3D" parent="BodyBody"]
+
+[node name="Arm2" parent="." instance=ExtResource("2_271xi")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Arm1" parent="." instance=ExtResource("2_271xi")]
+
+[node name="ego" parent="." instance=ExtResource("3_qx6eo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.888638, 0, 1.81756)
+
+[editable path="Arm2"]
+[editable path="Arm2/ArmBody"]
+[editable path="Arm1"]
