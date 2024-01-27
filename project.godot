@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FGJ24"
-run/main_scene="res://scenes/title_screen.tscn"
+run/main_scene="res://scenes/level_template.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -81,3 +81,12 @@ right_shoulder={
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":10,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+button_a={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
+[physics]
+
+3d/default_gravity=1.0

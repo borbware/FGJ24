@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://8egcwg1f4nu6"]
+
+[ext_resource type="PackedScene" uid="uid://usfq5ar7em4i" path="res://scenes/player.tscn" id="1_tix58"]
+[ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="2_thcbx"]
+[ext_resource type="Material" uid="uid://cf2s8y4k78ys4" path="res://assets/debug-material.tres" id="3_2fwva"]
+[ext_resource type="PackedScene" uid="uid://cpwt05i2vfu03" path="res://scenes/ground.tscn" id="4_xhdoo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as2yf"]
+albedo_color = Color(0.980392, 0, 0.980392, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u048p"]
+size = Vector3(0.2, 0.2, 0.1)
+
+[node name="LevelTemplate" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267, -0.92794, 1.42122, 5.61001)
+
+[node name="Player" parent="." instance=ExtResource("1_tix58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.39371, 0)
+rotation_strength = 10.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.28425, 0.95875, 0, -0.95875, 0.28425, 0, 4.10531, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_thcbx")
+autoplay = true
+
+[node name="RightHandTarget" type="Node3D" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="RightHandTarget"]
+radius = 0.1
+material = ExtResource("3_2fwva")
+
+[node name="LeftHandTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3536, 0, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="LeftHandTarget"]
+radius = 0.1
+material = ExtResource("3_2fwva")
+
+[node name="LeftHold" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78, 0)
+
+[node name="LeftHoldMesh" type="CSGBox3D" parent="LeftHold"]
+size = Vector3(0.2, 0.2, 0.1)
+material = SubResource("StandardMaterial3D_as2yf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftHold"]
+shape = SubResource("BoxShape3D_u048p")
+
+[node name="Ground" parent="." instance=ExtResource("4_xhdoo")]
+
+[editable path="Player"]
+[editable path="Player/BodyBody/LeftArm"]
+[editable path="Player/BodyBody/LeftArm/ArmBody"]
+[editable path="Player/BodyBody/RightArm"]
