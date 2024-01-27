@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://dhmgmjc63j2aw"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_2n1lv"]
-radius = 0.1
+[sub_resource type="SphereShape3D" id="SphereShape3D_lwqdp"]
+radius = 0.2
 
 [node name="Ammo" type="RigidBody3D"]
 mass = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_2n1lv")
+shape = SubResource("SphereShape3D_lwqdp")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-radius = 0.1
+radius = 0.2
