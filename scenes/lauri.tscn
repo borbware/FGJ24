@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtcrtpt21nlyl"]
+[gd_scene load_steps=14 format=3 uid="uid://dtcrtpt21nlyl"]
 
 [ext_resource type="PackedScene" uid="uid://dmyema51vofun" path="res://scenes/level_template.tscn" id="1_iu1dw"]
+[ext_resource type="PackedScene" uid="uid://pg80nquqvv8o" path="res://assets/ego_iks.glb" id="2_cl8gf"]
+[ext_resource type="PackedScene" uid="uid://c7a3tfjxxdwyn" path="res://assets/kalusteet/wall.glb" id="3_x45el"]
+[ext_resource type="PackedScene" uid="uid://dtj6fas4fsva1" path="res://assets/kalusteet/wallcorner.glb" id="4_hp0pp"]
+[ext_resource type="PackedScene" uid="uid://bq8ng1forhhs4" path="res://assets/kalusteet v2/anthill.glb" id="5_4rj1u"]
+[ext_resource type="PackedScene" uid="uid://15i71lvoyvf1" path="res://assets/kalusteet/kiuas.glb" id="6_bigsn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_66js6"]
 size = Vector2(50, 50)
@@ -16,15 +21,21 @@ albedo_color = Color(0, 0.427451, 0.235294, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aphk0"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fybvg"]
+size = Vector3(3.84428, 2.978, 0.482666)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qowua"]
+size = Vector3(0.44812, 2.64209, 0.506348)
+
 [node name="Lauri" type="Node3D"]
 
 [node name="LevelTemplate" parent="." instance=ExtResource("1_iu1dw")]
 
 [node name="Camera3D" parent="LevelTemplate" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267, -0.92794, 25.3591, 3.53592)
+transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267, -0.21089, 42.0166, -72.1846)
 
 [node name="Player" parent="LevelTemplate" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3607, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.5658, 0)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="LevelTemplate"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -43.7687)
@@ -44,6 +55,17 @@ mesh = SubResource("PlaneMesh_66js6")
 skeleton = NodePath("../../StaticBody3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
+shape = SubResource("BoxShape3D_c6wvq")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -140.58)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LevelTemplate/StaticBody3D4"]
+mesh = SubResource("PlaneMesh_66js6")
+skeleton = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
 shape = SubResource("BoxShape3D_c6wvq")
 
@@ -69,6 +91,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aphk0")
 
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 26.9965, -136.343)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="LevelTemplate"]
 transform = Transform3D(10, 0, 0, 0, 0.935771, -10.5783, 0, 0.352609, 28.0731, 0, 21.4241, -30.6677)
 mesh = SubResource("BoxMesh_qyxic")
@@ -78,6 +111,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
 [node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.00245057, -0.00122824, 9.99998, -1.40409, 0.703682, 0.0174533, -0.527762, -1.87212, -4.37113e-07, 0.0107415, 18.6201, -22.6833)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D7/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aphk0")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="LevelTemplate"]
@@ -90,5 +134,180 @@ surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="ego_iks" parent="LevelTemplate" instance=ExtResource("2_cl8gf")]
+transform = Transform3D(-1.49838, 0, 0.0697969, 0, 1.5, 0, -0.0697969, 0, -1.49838, 0, 23.4986, 0)
+
+[node name="wall2" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -13.468, 27.437, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall20" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.5, 0, 0, 0, -1.7, -2.26494e-07, 0, 2.56693e-07, -1.5, -12.5498, 36.9454, -109.972)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall20/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall19" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.05161, -0.82464, 2.26494e-07, -2.32398, -0.72799, -1.31134e-07, 5.12953e-07, -6.08742e-08, -1.5, -6.68652, 46.0155, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall19/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall21" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.03378, 0.83018, 1.31134e-07, 2.3396, -0.721665, 0, 1.77799e-07, 7.25767e-08, -1.5, -15.2678, 27.4692, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall21"]
+transform = Transform3D(1, 3.50288e-15, 0, -1.19209e-07, 1, 0, 1.42109e-14, 1.42109e-14, 1, -2.2787, 0.0965023, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall21/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall22" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.5, 0, 0, 0, -1.7, -2.26494e-07, 0, 2.56693e-07, -1.5, -12.55, 36.945, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall22/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall23" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.05161, -0.82464, 2.26494e-07, -2.32398, -0.72799, -1.31134e-07, 5.12953e-07, -6.08742e-08, -1.5, -6.687, 46.015, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall23/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall26" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(2.11419, 0.804489, -1.31134e-07, 2.2672, -0.750198, 0, -1.84829e-07, -7.03307e-08, -1.5, -15.2678, 27.4692, -133.139)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall26"]
+transform = Transform3D(1, 3.50288e-15, 0, -1.19209e-07, 1, 0, 1.42109e-14, 1.42109e-14, 1, -2.2787, 0.0965023, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall26/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall3" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.23, 27.437, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wallcorner" parent="LevelTemplate" instance=ExtResource("4_hp0pp")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.348, 27.315, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wallcorner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wallcorner/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24004, 1.67396, -0.0012207)
+shape = SubResource("BoxShape3D_qowua")
+
+[node name="wallcorner2" parent="LevelTemplate" instance=ExtResource("4_hp0pp")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.44, 27.315, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wallcorner2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wallcorner2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24004, 1.67396, -0.0012207)
+shape = SubResource("BoxShape3D_qowua")
+
+[node name="wall7" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(4, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.0436, 27.437, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall10" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(-2.44784e-07, 0, -1.5, 0, 1.5, 0, 5.6, 0, -6.55671e-08, 5.17096, 27.437, -143.958)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall10/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall11" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(-2.44784e-07, 0, -1.5, 0, 1.5, 0, 5.6, 0, -6.55671e-08, -10.9248, 27.437, -143.958)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall11/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall24" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(-2.84124e-07, -3.02367, -1.11093, 1.53951e-14, 3.33278, -1.00789, 6.5, -1.32169e-07, -4.85601e-08, 6.04976, 32.0407, -147.334)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall24/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall25" parent="LevelTemplate" instance=ExtResource("3_x45el")]
+transform = Transform3D(-2.84124e-07, 3.02274, 1.11121, 0, 3.33362, -1.00758, -6.5, -1.32128e-07, -4.85724e-08, -11.6173, 32.019, -95.284)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall25/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wallcorner3" parent="LevelTemplate" instance=ExtResource("4_hp0pp")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.348, 27.315, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wallcorner3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wallcorner3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24004, 1.67396, -0.0012207)
+shape = SubResource("BoxShape3D_qowua")
+
+[node name="wallcorner4" parent="LevelTemplate" instance=ExtResource("4_hp0pp")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.44, 27.315, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wallcorner4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wallcorner4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24004, 1.67396, -0.0012207)
+shape = SubResource("BoxShape3D_qowua")
+
+[node name="anthill2" parent="LevelTemplate" instance=ExtResource("5_4rj1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.44514, 26.7089, -116.7)
+
+[node name="kiuas2" parent="LevelTemplate" instance=ExtResource("6_bigsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.223118, 27.5275, -130.171)
 
 [editable path="LevelTemplate"]
