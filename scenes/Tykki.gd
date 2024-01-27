@@ -5,6 +5,7 @@ extends Node3D
 @export var force: float
 @export var rotate_ground_speed: float
 @export var rotate_up_speed: float
+@export var tykki_speed: float
 
 var rotation_x: float;
 var rotation_y: float;
@@ -33,13 +34,14 @@ func _process(delta):
 		Input.get_axis("right_stick_left", "right_stick_right"),
 		Input.get_axis("right_stick_up", "right_stick_down")
 	)
-	rotation_y += right_stick.y * rotate_up_speed * delta
+	rotation_y += left_stick.y * rotate_up_speed * delta
 	$Tykki.transform.basis = Basis()
 	$Tykki.rotate_object_local(Vector3(0, 1, 0), rotation_x)
 	# $Tykki.rotate_object_local($Tykki.global_transform.basis.z, -right_stick.y * rotate_up_speed * delta)
 	$Tykki.rotate_object_local(Vector3(1, 0, 0), rotation_y)
 	
-	
+	if Input.is_action_pressed("button_b"):
+		$Tykki.position += -$Tykki.get_global_transform().basis.z * tykki_speed * delta
 	if Input.is_action_just_pressed("button_a"):
 		shoot()
 		print($Tykki.transform)
