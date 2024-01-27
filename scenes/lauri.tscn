@@ -1,7 +1,94 @@
-[gd_scene load_steps=2 format=3 uid="uid://5mh7dgx4hs4a"]
+[gd_scene load_steps=7 format=3 uid="uid://dtcrtpt21nlyl"]
 
-[ext_resource type="PackedScene" uid="uid://bxt60620luavk" path="res://scenes/level_template.tscn" id="1_iu1dw"]
+[ext_resource type="PackedScene" uid="uid://dmyema51vofun" path="res://scenes/level_template.tscn" id="1_iu1dw"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_66js6"]
+size = Vector2(50, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6wvq"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyxic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lray0"]
+albedo_color = Color(0, 0.427451, 0.235294, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aphk0"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Lauri" type="Node3D"]
 
 [node name="LevelTemplate" parent="." instance=ExtResource("1_iu1dw")]
+
+[node name="Camera3D" parent="LevelTemplate" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.996267, 0.0863211, 0, -0.0863211, 0.996267, -0.92794, 25.3591, 3.53592)
+
+[node name="Player" parent="LevelTemplate" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3607, 0)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -43.7687)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LevelTemplate/StaticBody3D2"]
+mesh = SubResource("PlaneMesh_66js6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
+shape = SubResource("BoxShape3D_c6wvq")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -91.3517)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LevelTemplate/StaticBody3D3"]
+mesh = SubResource("PlaneMesh_66js6")
+skeleton = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
+shape = SubResource("BoxShape3D_c6wvq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 15.255, -4.4536)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 26.9965, -97.7892)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(10, 0, 0, 0, 0.935771, -10.5783, 0, 0.352609, 28.0731, 0, 21.4241, -30.6677)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, 0, 26.9018, -61.1594)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("../StaticBody3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[editable path="LevelTemplate"]
