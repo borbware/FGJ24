@@ -44,4 +44,3 @@ func _process(delta):
 		$Tykki.position += -$Tykki.get_global_transform().basis.z * tykki_speed * delta
 	if Input.is_action_just_pressed("button_a"):
 		shoot()
-		print($Tykki.transform)

@@ -13,6 +13,7 @@ func _process(delta):
 
 func _on_area_3d_area_entered(area):
 	var object = area.get_parent()
+	print(object)
 	if object.is_in_group("Player"):
 		var nextScene = preload("res://scenes/title_screen.tscn")
 		get_tree().change_scene(nextScene)
