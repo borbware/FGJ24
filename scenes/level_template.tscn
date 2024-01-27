@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxt60620luavk"]
+[gd_scene load_steps=7 format=3 uid="uid://bxt60620luavk"]
 
 [ext_resource type="PackedScene" uid="uid://usfq5ar7em4i" path="res://scenes/player.tscn" id="1_iqs33"]
 [ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="2_i0m2m"]
 [ext_resource type="PackedScene" uid="uid://dyefvl1qnwjdp" path="res://scenes/humanmodel.tscn" id="3_sow8x"]
+[ext_resource type="PackedScene" uid="uid://b2y3a778f3dj0" path="res://scenes/humanmodel2.tscn" id="4_bhy3q"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_66js6"]
 size = Vector2(50, 50)
@@ -41,7 +42,10 @@ stream = ExtResource("2_i0m2m")
 autoplay = true
 
 [node name="ego" parent="." instance=ExtResource("3_sow8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.235643, 1.50656, 1.99406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23564, 1.50656, 1.99406)
+
+[node name="Node3D" parent="." instance=ExtResource("4_bhy3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 2)
 
 [editable path="Player"]
 [editable path="Player/Arm2"]
