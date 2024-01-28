@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ir3kxb3fh7e"]
+
+[ext_resource type="PackedScene" uid="uid://7kritup8i3gb" path="res://scenes/ammo.tscn" id="1_cqddk"]
+[ext_resource type="PackedScene" uid="uid://db0q4j7rlnw0i" path="res://assets/kalusteet v2/dynamite.glb" id="2_wtkwq"]
+
+[node name="Ammo" instance=ExtResource("1_cqddk")]
+
+[node name="dynamite2" parent="." index="2" instance=ExtResource("2_wtkwq")]
+transform = Transform3D(1.67, 0, 0, 0, 1.67, 0, 0, 0, 1.67, 1.769, -0.644, -10.018)
