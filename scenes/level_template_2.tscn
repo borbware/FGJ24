@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://8egcwg1f4nu6"]
+[gd_scene load_steps=7 format=3 uid="uid://b44oh42hrse0p"]
 
 [ext_resource type="PackedScene" uid="uid://usfq5ar7em4i" path="res://scenes/player.tscn" id="1_tix58"]
 [ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="2_thcbx"]
-[ext_resource type="Material" uid="uid://cf2s8y4k78ys4" path="res://assets/debug-material.tres" id="3_2fwva"]
-[ext_resource type="PackedScene" uid="uid://cpwt05i2vfu03" path="res://scenes/ground.tscn" id="4_xhdoo"]
+[ext_resource type="Material" path="res://assets/debug-material.tres" id="3_2fwva"]
+[ext_resource type="PackedScene" uid="uid://bh7ej8uv6rxsp" path="res://scenes/ground.tscn" id="4_xhdoo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as2yf"]
 albedo_color = Color(0.980392, 0, 0.980392, 1)
