@@ -1,11 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://7kritup8i3gb"]
+[gd_scene load_steps=12 format=3 uid="uid://7kritup8i3gb"]
+
+[ext_resource type="Script" path="res://scenes/ammo.gd" id="1_1brym"]
+[ext_resource type="AudioStream" uid="uid://dl7xqr5ei3cg8" path="res://assets/sound-fx/Osu1.wav" id="2_485cb"]
+[ext_resource type="AudioStream" uid="uid://dkbjak3ptmnqr" path="res://assets/sound-fx/Osu2.wav" id="3_7nm1a"]
+[ext_resource type="AudioStream" uid="uid://c74nnwq3woye3" path="res://assets/sound-fx/Osu3.wav" id="4_4wx1j"]
+[ext_resource type="AudioStream" uid="uid://k10a088qthvm" path="res://assets/sound-fx/Osu4.wav" id="5_mofuf"]
+[ext_resource type="AudioStream" uid="uid://f762vft8w0hc" path="res://assets/sound-fx/Osu5.wav" id="6_c8m2b"]
+[ext_resource type="AudioStream" uid="uid://dlle8du20hvlv" path="res://assets/sound-fx/Osu6.wav" id="7_wrjb2"]
+[ext_resource type="AudioStream" uid="uid://dug5bltv8h05y" path="res://assets/sound-fx/Osu7.wav" id="8_hucct"]
+[ext_resource type="AudioStream" uid="uid://cgji5l0kgvmf8" path="res://assets/sound-fx/Osu8.wav" id="9_jywq0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lwqdp"]
+radius = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wfnnt"]
 radius = 1.0
 
 [node name="Ammo" type="RigidBody3D" groups=["Ammo"]]
 mass = 50.0
 gravity_scale = 5.0
+script = ExtResource("1_1brym")
+hurt_noises = Array[AudioStreamWAV]([ExtResource("2_485cb"), ExtResource("3_7nm1a"), ExtResource("4_4wx1j"), ExtResource("5_mofuf"), ExtResource("6_c8m2b"), ExtResource("7_wrjb2"), ExtResource("8_hucct"), ExtResource("9_jywq0")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_lwqdp")
@@ -13,3 +28,12 @@ shape = SubResource("SphereShape3D_lwqdp")
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 visible = false
 radius = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_wfnnt")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
