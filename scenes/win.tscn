@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqpw3o2wm7ujl"]
+
+[ext_resource type="Script" path="res://scenes/win.gd" id="1_4fyrr"]
+[ext_resource type="Texture2D" uid="uid://dsxttgnsbalnj" path="res://assets/winscreen1.png" id="1_vvj0j"]
+[ext_resource type="AudioStream" uid="uid://47y1ukv1yx7s" path="res://assets/music/FGJ24-fanfaari-v1.mp3" id="3_1v4f8"]
+
+[node name="Win" type="Node2D"]
+script = ExtResource("1_4fyrr")
+
+[node name="Winscreen1" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+texture = ExtResource("1_vvj0j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1v4f8")
+autoplay = true
