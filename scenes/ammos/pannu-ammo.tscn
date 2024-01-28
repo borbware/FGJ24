@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4xhixrv02y33"]
+
+[ext_resource type="PackedScene" path="res://scenes/ammo.tscn" id="1_takhe"]
+[ext_resource type="PackedScene" uid="uid://c6pl0msg51jvp" path="res://assets/kalusteet v2/pan.glb" id="2_sgni5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wlu2s"]
+
+[node name="Ammo" instance=ExtResource("1_takhe")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_wlu2s")
+
+[node name="pan2" parent="." index="2" instance=ExtResource("2_sgni5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.435, 0, -8.62)

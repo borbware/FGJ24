@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcub22ccunpqg"]
+
+[ext_resource type="PackedScene" path="res://scenes/ammo.tscn" id="1_fosu0"]
+[ext_resource type="PackedScene" uid="uid://cklwcqwnxn7on" path="res://assets/kalusteet v2/guitar.glb" id="2_1j1ty"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30fbi"]
+
+[node name="Ammo" instance=ExtResource("1_fosu0")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.335, 0, 0, 0, 2.71, 0, 0, 0)
+shape = SubResource("BoxShape3D_30fbi")
+
+[node name="guitar2" parent="." index="2" instance=ExtResource("2_1j1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82, -0.235, -6.94)
