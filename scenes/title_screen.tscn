@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cta2x4yqj60gc"]
+[gd_scene load_steps=8 format=3 uid="uid://cta2x4yqj60gc"]
 
 [ext_resource type="Texture2D" uid="uid://do83rb4y0nct7" path="res://assets/title-screen/loading.png" id="1_8rsmy"]
 [ext_resource type="Script" path="res://scenes/StartTextureButton.gd" id="1_63ab8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dasrdtos0nbwx" path="res://assets/title-screen/start.png" id="2_0bouj"]
 [ext_resource type="AudioStream" uid="uid://bg7tm1hajmcia" path="res://assets/sound-fx/FGJ24-startgame-v1.mp3" id="3_ivg8v"]
 [ext_resource type="Texture2D" uid="uid://cd2atuhxc0exj" path="res://assets/title-screen/quit.png" id="3_tav55"]
+[ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="7_0ed42"]
 
 [node name="TitleScreen" type="Node2D"]
 
@@ -41,3 +42,7 @@ stream = ExtResource("3_ivg8v")
 visible = false
 position = Vector2(587, 323)
 texture = ExtResource("1_8rsmy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0ed42")
+autoplay = true
