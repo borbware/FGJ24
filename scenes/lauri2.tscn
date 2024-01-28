@@ -1,0 +1,601 @@
+[gd_scene load_steps=24 format=3 uid="uid://uj6tfbdavvsw"]
+
+[ext_resource type="PackedScene" uid="uid://8lfphc7acd5g" path="res://scenes/kiuasbody.tscn" id="1_mt5j1"]
+[ext_resource type="PackedScene" uid="uid://bxt60620luavk" path="res://scenes/level_template.tscn" id="2_6nl60"]
+[ext_resource type="PackedScene" uid="uid://pg80nquqvv8o" path="res://assets/ego_iks.glb" id="3_cp4u8"]
+[ext_resource type="PackedScene" uid="uid://c7a3tfjxxdwyn" path="res://assets/kalusteet/wall.glb" id="4_6l8ns"]
+[ext_resource type="PackedScene" uid="uid://bq8ng1forhhs4" path="res://assets/kalusteet v2/anthill.glb" id="5_hwfxf"]
+[ext_resource type="Texture2D" uid="uid://cuw5qjsah3sre" path="res://assets/4622b3ef-6a7c-4cb5-ba2b-172bf1008979.jpg" id="6_qo0rh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmiei"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6wvq"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyxic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lray0"]
+albedo_color = Color(0, 0.427451, 0.235294, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aphk0"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_84j6x"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7vpx4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m57wx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kwar2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yte20"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qcdqe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sehck"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5d82f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fybvg"]
+size = Vector3(3.84428, 2.978, 0.482666)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6e5of"]
+albedo_texture = ExtResource("6_qo0rh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35gq8"]
+albedo_texture = ExtResource("6_qo0rh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y50db"]
+
+[node name="Lauri" type="Node3D"]
+
+[node name="Kiuasbody" parent="." instance=ExtResource("1_mt5j1")]
+transform = Transform3D(2.485, 0, 0, 0, 2.485, 0, 0, 0, 2.485, -5.21218, 27.5844, -131.58)
+
+[node name="LevelTemplate" parent="." instance=ExtResource("2_6nl60")]
+
+[node name="DirectionalLight3D" parent="LevelTemplate" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.28425, 0.95875, 0, -0.95875, 0.28425, -2.41624, 50.2695, 65.758)
+
+[node name="Human" parent="LevelTemplate" index="2"]
+transform = Transform3D(-0.0265957, 0, -0.999646, 0, 1, 0, 0.999646, 0, -0.0265957, -72.478, 45.3526, 36.7086)
+
+[node name="Physical Bone DEF-spine" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="28"]
+transform = Transform3D(1.00001, -1.20718e-05, -2.56207e-06, -1.38913e-06, -0.249647, -0.968347, -6.87316e-07, 0.968431, -0.249648, -3.43323e-05, 1.08333, -0.0364685)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45283e-05, 0.000179707, 0.075782)
+body_offset = Transform3D(1.00001, -1.20718e-05, -2.5616e-06, -1.51666e-06, 1.59329e-05, -1.00001, -3.18512e-07, 1.00009, -5.70294e-06, -3.43323e-05, 0.0757828, -0.000179291)
+
+[node name="Physical Bone DEF-spine_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="29"]
+transform = Transform3D(1.0001, -0.00270165, -2.81027e-07, 2.13959e-05, -0.12591, -0.992486, 5.9139e-06, 0.99874, -0.122959, -0.002388, 1.22871, -0.0209122)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999997, 0, 0.999997, -3.61998e-06, 0.00242121, 0.0123763, 0.0703875)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.0001, -0.00270165, -2.81027e-07, 2.19608e-05, -0.00215587, -1.00007, 3.23914e-06, 1.00664, 3.4662e-06, -0.002388, 0.0704193, -0.0124588)
+
+[node name="Physical Bone DEF-spine_002" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="30"]
+transform = Transform3D(1.00027, -1.53668e-06, 1.85979e-06, -1.79725e-05, 0.0318252, -0.999823, -5.27687e-06, 1, 0.0318226, -0.000232697, 1.42135, -0.00411224)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.000232394, -0.000381204, 0.128463)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00027, -1.53854e-06, 1.85973e-06, -1.77956e-05, -3.64976e-06, -1.00033, -5.84498e-06, 1.00051, -5.51612e-07, -0.000232697, 0.128506, 0.00038147)
+
+[node name="Physical Bone DEF-spine_003" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="31"]
+transform = Transform3D(1.0001, 3.59491e-06, -0.000295198, -2.50735e-06, 0.0285631, -0.999489, -1.50315e-06, 0.999631, 0.0285653, -0.0010643, 1.55981, -0.00952911)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00108818, 0.000929959, 0.0941907)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.0001, 3.59491e-06, -0.000295198, -2.46341e-06, 2.09726e-06, -0.999897, -1.57394e-06, 1.00004, 8.41713e-06, -0.00106049, 0.0941811, -0.000930786)
+
+[node name="Physical Bone DEF-spine_004" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="32"]
+transform = Transform3D(1.00008, 8.81962e-06, 0.000106229, -5.39623e-07, -0.368817, -0.929237, -8.77306e-07, 0.929655, -0.368703, -9.53674e-05, 2.2216, 0.000724792)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -0.999999, 0, 0.999999, -3.61999e-06, 3.36934e-05, 0.196486, 0.528324)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, 8.81962e-06, 0.000106229, -8.25152e-07, 2.05978e-05, -0.999712, -6.16536e-07, 1.00014, -2.81079e-05, -9.15527e-05, 0.528168, -0.196499)
+
+[node name="Physical Bone DEF-spine_005" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="33"]
+transform = Transform3D(1.00008, 1.23046e-05, 2.7325e-06, 8.77163e-07, -0.18669, -0.982563, -5.01424e-06, 0.982695, -0.186629, -0.000339508, 1.75166, 0.0174866)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.000339372, 0.00154853, 0.0322375)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, 1.23065e-05, 2.7325e-06, -7.40401e-08, -4.10205e-05, -1.00013, -5.09061e-06, 1.00027, -5.6647e-06, -0.000339508, 0.0322418, -0.00154877)
+
+[node name="Physical Bone DEF-shoulder_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="34"]
+transform = Transform3D(0.474203, -0.0862965, -0.885116, 0.356695, 0.928529, 0.102633, 0.805226, -0.361015, 0.481702, 0.0560913, 1.55949, 0.020813)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999996, 0, 0.999996, -3.61998e-06, 0.0363742, 0.0285851, 0.0593953)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(0.934456, -0.354985, -0.0336708, 0.000181198, 0.108161, -1.0072, 0.356764, 0.928565, 0.102056, -0.021843, 0.0567245, -0.0455818)
+
+[node name="Physical Bone DEF-upper_arm_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="35"]
+transform = Transform3D(-0.509573, 0.0781234, -0.856558, -0.830489, -0.292405, 0.469715, -0.214041, 0.953388, 0.214226, 0.255085, 1.55035, -0.0442505)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -0.00178115, 0.0020388, 0.071042)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(0.997592, -3.0959e-05, -1.02222e-05, -0.000542641, 1.98036e-05, -1.00011, -0.00100357, 1.00028, -4.00469e-06, 0.00177765, 0.0710487, -0.00204086)
+
+[node name="Physical Bone DEF-upper_arm_L_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="36"]
+transform = Transform3D(-0.510092, 0.0783395, -0.856205, -0.8332, -0.292395, 0.469486, -0.213655, 0.953835, 0.214143, 0.381668, 1.48293, -0.074173)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.000258248, 0.000967357, 0.0733039)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00003, -0.000245428, 1.88351e-05, 0.000204057, 0.00010439, -0.99968, 0.000116983, 1.00072, 1.16304e-05, -0.000259399, 0.0732803, -0.000968933)
+
+[node name="Physical Bone DEF-forearm_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="37"]
+transform = Transform3D(-0.510379, -0.240863, -0.825833, -0.833137, -0.100192, 0.544158, -0.213759, 0.965538, -0.149532, 0.500427, 1.41279, -0.0786972)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00145423, 0.000863342, 0.0691137)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00015, 1.65105e-05, 3.98159e-05, -5.42402e-05, 2.25306e-05, -1.00023, -3.33786e-06, 1.00016, 3.56287e-05, -0.00145721, 0.0691299, -0.000865936)
+
+[node name="Physical Bone DEF-forearm_L_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="38"]
+transform = Transform3D(-0.510157, -0.241092, -0.824814, -0.833031, -0.099581, 0.543508, -0.213699, 0.964365, -0.149386, 0.604771, 1.34091, -0.0595169)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -0.00108538, 0.000290456, 0.0658985)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(0.999934, -0.000125423, 2.98321e-05, 7.99e-05, -0.000674441, -0.999017, -9.32813e-06, 0.99902, -4.00841e-06, 0.00108337, 0.065834, -0.000289917)
+
+[node name="Physical Bone DEF-shoulder_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="39"]
+transform = Transform3D(0.474015, 0.0863725, 0.880883, -0.357074, 0.928604, 0.102005, -0.805134, -0.360933, 0.476908, -0.114975, 1.99001, -0.0610504)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.079293, -0.39564, 0.105876)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(0.934282, 0.354952, 0.0356567, -6.56843e-05, 0.108054, -1.00112, -0.357143, 0.928639, 0.101431, 0.0625763, 0.14875, 0.384987)
+
+[node name="CollisionShape3D" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D/Physical Bone DEF-shoulder_R" index="0"]
+transform = Transform3D(1, 0, 2.98023e-08, -5.96046e-08, 0, 1, 0, -1, 0, 0.000729561, -0.00189781, -0.000204802)
+
+[node name="Physical Bone DEF-upper_arm_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="40"]
+transform = Transform3D(-0.508468, -0.0780759, 0.856583, 0.830992, -0.29236, 0.469681, 0.211743, 0.953246, 0.214223, -0.257092, 1.54943, -0.0452499)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00173181, 0.00257314, 0.0734015)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(0.996955, 1.36793e-05, -3.17097e-05, -0.000147671, -1.14292e-05, -1.00011, -0.00142047, 1.00012, 1.50502e-06, -0.00172424, 0.07341, -0.00257111)
+
+[node name="Physical Bone DEF-upper_arm_R_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="41"]
+transform = Transform3D(-0.510276, -0.0781072, 0.856874, 0.833104, -0.292395, 0.46981, 0.213746, 0.953288, 0.214303, -0.380264, 1.48307, -0.0739517)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.000293899, 0.000902691, 0.0719288)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00007, 9.99495e-06, -5.57601e-05, -2.0206e-05, 2.25604e-05, -1.00044, 1.29119e-05, 1.00018, 1.70767e-05, -0.000289917, 0.0719604, -0.000904083)
+
+[node name="Physical Bone DEF-forearm_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="42"]
+transform = Transform3D(-0.510284, 0.240865, 0.825733, 0.833107, -0.100136, 0.544148, 0.213748, 0.965545, -0.149555, -0.499809, 1.41544, -0.0783539)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -0.00341766, 0.000656773, 0.0672164)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00007, 3.10093e-05, -1.2517e-06, -1.0252e-05, -9.17912e-06, -1.00015, 1.91256e-05, 1.00016, -1.01924e-05, 0.00341797, 0.0672264, -0.000656128)
+
+[node name="Physical Bone DEF-forearm_R_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="43"]
+transform = Transform3D(-0.510242, 0.240851, 0.82566, 0.833079, -0.100162, 0.544095, 0.213725, 0.965497, -0.149532, -0.604744, 1.34063, -0.0593567)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00128956, 8.38729e-05, 0.0659829)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00002, 5.94556e-06, -3.33786e-06, -3.25739e-05, 9.86457e-06, -1.00006, 8.82894e-06, 1.00011, 4.47035e-07, -0.00128937, 0.0659866, -8.39233e-05)
+
+[node name="Physical Bone DEF-thigh_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="44"]
+transform = Transform3D(1.00008, -6.0536e-07, 3.85337e-05, -7.52315e-07, -0.0764411, 0.997077, -2.57045e-07, -0.997107, -0.0764563, 0.0984879, 0.93544, -0.00379181)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -0.000493513, -0.00185601, 0.136817)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -6.03497e-07, 3.85342e-05, 7.3039e-07, -1.85394e-06, -1, 3.14787e-07, 1.00004, 1.56043e-05, 0.000488281, 0.136818, 0.00185394)
+
+[node name="Physical Bone DEF-thigh_L_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="45"]
+transform = Transform3D(1.00008, -1.60187e-07, 3.02137e-05, 1.06821e-06, -0.076438, 0.997097, 1.90921e-06, -0.997086, -0.0764609, 0.0981941, 0.665546, 0.0172653)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -0.000198743, -0.00149031, 0.139344)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -1.60187e-07, 3.02137e-05, -9.18983e-07, -3.32149e-06, -1.00002, -1.98744e-06, 1.00002, 1.86578e-05, 0.00019455, 0.139347, 0.00148773)
+
+[node name="Physical Bone DEF-shin_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="46"]
+transform = Transform3D(1.0001, -6.42613e-07, -2.58698e-06, -1.29281e-06, 0.098641, 0.995154, 4.07919e-07, -0.995236, 0.0986343, 0.0980148, 0.426506, 0.0176468)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -1.49695e-05, 1.52666e-05, 0.111233)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.0001, -6.42613e-07, -2.58675e-06, 1.24634e-06, 2.23493e-06, -1.00003, -5.32717e-07, 1.00012, -8.60964e-08, 1.52588e-05, 0.111237, -1.52588e-05)
+
+[node name="Physical Bone DEF-shin_L_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="47"]
+transform = Transform3D(1.00008, -8.77306e-07, -1.21752e-05, 6.84121e-06, 0.0986365, 0.995179, -3.0417e-06, -0.995166, 0.0986341, 0.0979118, 0.196159, -0.00518036)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 8.9138e-05, 2.25919e-05, 0.115594)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -8.75443e-07, -1.21754e-05, -6.50808e-06, -5.04151e-08, -1.00005, 3.69921e-06, 1.00005, 2.55121e-06, -8.7738e-05, 0.115601, -2.28882e-05)
+
+[node name="Physical Bone DEF-thigh_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="48"]
+transform = Transform3D(1.00008, -6.0536e-07, 3.85337e-05, -7.52315e-07, -0.0764411, 0.997077, -2.57045e-07, -0.997107, -0.0764563, -0.0979691, 0.937286, -0.00238037)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -3.95345e-05, -0.000307273, 0.135086)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -6.03497e-07, 3.85342e-05, 7.3039e-07, -1.85394e-06, -1, 3.14787e-07, 1.00004, 1.56043e-05, 3.43323e-05, 0.135086, 0.000305176)
+
+[node name="Physical Bone DEF-thigh_R_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="49"]
+transform = Transform3D(1.00008, -1.60187e-07, 3.02137e-05, 1.06821e-06, -0.076438, 0.997097, 1.90921e-06, -0.997086, -0.0764609, -0.0986061, 0.666336, 0.0156631)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.000602303, -0.00303141, 0.138432)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -1.60187e-07, 3.02137e-05, -9.18983e-07, -3.32149e-06, -1.00002, -1.98744e-06, 1.00002, 1.86578e-05, -0.000606537, 0.138435, 0.00302887)
+
+[node name="Physical Bone DEF-shin_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="50"]
+transform = Transform3D(1.0001, -6.42613e-07, -2.58698e-06, -1.29281e-06, 0.098641, 0.995154, 4.07919e-07, -0.995236, 0.0986343, -0.103043, 0.426327, -0.0193787)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00504279, -0.0368076, 0.115063)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.0001, -6.42613e-07, -2.58675e-06, 1.24634e-06, 2.23493e-06, -1.00003, -5.32717e-07, 1.00012, -8.60964e-08, -0.00504303, 0.115067, 0.0368118)
+
+[node name="Physical Bone DEF-shin_R_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="51"]
+transform = Transform3D(1.00008, -8.77306e-07, -1.21752e-05, 6.84121e-06, 0.0986365, 0.995179, -3.0417e-06, -0.995166, 0.0986341, -0.134361, 0.196751, -1.13805)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.0363604, -1.12732, 0.226737)
+joint_rotation = Vector3(1.5708, 0, 0)
+body_offset = Transform3D(1.00008, -8.75443e-07, -1.21754e-05, -6.50808e-06, -5.04151e-08, -1.00005, 3.69921e-06, 1.00005, 2.55121e-06, -0.0363617, 0.226749, 1.12737)
+
+[node name="Tankki" parent="LevelTemplate" index="3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -80.2553, 42.7157, 36.5776)
+
+[node name="CSGCylinder3D" parent="LevelTemplate/Tankki/Tykki" index="1"]
+transform = Transform3D(-9.31323e-09, 2.98023e-08, 0.405268, 0.405268, -7.45058e-08, -5.58794e-09, 7.45058e-09, 1, -1.49012e-08, 0, 0, 0)
+material = SubResource("StandardMaterial3D_mmiei")
+
+[node name="Ground" parent="LevelTemplate" index="4"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -1, 0)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -91.3517)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
+shape = SubResource("BoxShape3D_c6wvq")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -140.58)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155792, 0, -0.0575562)
+shape = SubResource("BoxShape3D_c6wvq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(77.89, 0, 0, 0, 1, 0, 0, 0, 12.365, -48.2627, 40.5053, 36.1175)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(77.89, 0, 0, 0, -4.37114e-08, -12.365, 0, 1, -5.40491e-07, -48.2627, 40.5053, 42.7613)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(77.89, 0, 0, 0, -4.37114e-08, -12.365, 0, 1, -5.40491e-07, -48.2627, 40.5053, 29.9571)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(-1.05629e-06, 0, 12.365, 0, 1, 0, -24.165, 0, -5.40491e-07, 1.08109, 40.505, 23.8365)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(25.35, 0, 0, 0, 1, 0, 0, 0, 25.285, 1.05486, 39.9, 36.1175)
+mesh = SubResource("CylinderMesh_84j6x")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D7/StaticBody3D"]
+shape = SubResource("CylinderShape3D_7vpx4")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, -0.970876, -6.01382, 25.3395, 0.0280009, 0.173444, 0, -0.23794, 24.5588, 14.2005, 43.4948, 36.473)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D9/StaticBody3D"]
+shape = SubResource("BoxShape3D_kwar2")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, -0.980279, 4.94335, 25.3395, 0.0282721, -0.142571, 0, 0.195587, 24.7967, 13.7667, 43.5073, 34.2973)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D14/StaticBody3D"]
+shape = SubResource("BoxShape3D_kwar2")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, -0.825942, 14.2359, 25.3395, 0.0238209, -0.410576, 2.98023e-08, 0.563252, 20.8926, 16.0373, 43.4418, 34.8572)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D16/StaticBody3D"]
+shape = SubResource("BoxShape3D_kwar2")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, -0.850137, -13.2942, 25.3395, 0.0245187, 0.383415, 0, -0.525991, 21.5046, 12.5772, 43.5416, 44.1604)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D10/StaticBody3D"]
+shape = SubResource("BoxShape3D_yte20")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, -0.401988, -23.1406, 25.3395, 0.0115937, 0.667395, -2.98023e-08, -0.915571, 10.1685, 7.52821, 43.6872, 47.5601)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D11/StaticBody3D"]
+shape = SubResource("BoxShape3D_qcdqe")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, 0.138562, -25.0305, 25.3395, -0.00399626, 0.721901, -2.53613e-08, -0.990346, -3.50501, 2.33259, 43.8371, 49.2112)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D12/StaticBody3D"]
+shape = SubResource("BoxShape3D_sehck")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, 0.465328, -22.3688, 25.3395, -0.0134205, 0.645137, -3.20574e-08, -0.885037, -11.7707, -1.34486, 43.9431, 49.3115)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D13/StaticBody3D"]
+shape = SubResource("BoxShape3D_5d82f")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(0.730812, 0.720663, -17.5146, 25.3395, -0.0207845, 0.505135, -4.53214e-08, -0.692974, -18.2295, -1.47986, 43.947, 51.6241)
+mesh = SubResource("BoxMesh_m57wx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D15/StaticBody3D"]
+shape = SubResource("BoxShape3D_5d82f")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 26.9965, -89.8653)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 26.9965, -128.581)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(10, 0, 0, 0, 0.971932, 13.377, 0, -0.235261, 55.2641, 0, 33.7034, -15.7536)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="LevelTemplate"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, 0, 26.9907, -57.0381)
+mesh = SubResource("BoxMesh_qyxic")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_aphk0")
+
+[node name="ego_iks" parent="LevelTemplate" instance=ExtResource("3_cp4u8")]
+transform = Transform3D(-1.49838, 0, 0.0697969, 0, 1.5, 0, -0.0697969, 0, -1.49838, 0, 23.4986, 0)
+
+[node name="wall2" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -13.468, 27.437, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall20" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.5, 0, 0, 0, -1.7, -2.26494e-07, 0, 2.56693e-07, -1.5, -12.5498, 36.9454, -109.972)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall20/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall19" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.05161, -0.82464, 2.26494e-07, -2.32398, -0.72799, -1.31134e-07, 5.12953e-07, -6.08742e-08, -1.5, -6.68652, 46.0155, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall19/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall21" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.03378, 0.83018, 1.31134e-07, 2.3396, -0.721665, 0, 1.77799e-07, 7.25767e-08, -1.5, -15.2678, 27.4692, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall21"]
+transform = Transform3D(1, 3.50288e-15, 0, -1.19209e-07, 1, 0, 1.42109e-14, 1.42109e-14, 1, -2.2787, 0.0965023, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall21/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall22" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.5, 0, 0, 0, -1.7, -2.26494e-07, 0, 2.56693e-07, -1.5, -12.55, 36.945, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall22/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall23" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.05161, -0.82464, 2.26494e-07, -2.32398, -0.72799, -1.31134e-07, 5.12953e-07, -6.08742e-08, -1.5, -6.687, 46.015, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall23/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall26" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(2.11419, 0.804489, -1.31134e-07, 2.2672, -0.750198, 0, -1.84829e-07, -7.03307e-08, -1.5, -15.2678, 27.4692, -133.139)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall26"]
+transform = Transform3D(1, 3.50288e-15, 0, -1.19209e-07, 1, 0, 1.42109e-14, 1.42109e-14, 1, -2.2787, 0.0965023, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall26/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall3" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.23, 27.437, -110)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall7" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(4, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.0436, 27.437, -133)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall10" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(-2.44784e-07, 0, -1.5, 0, 1.5, 0, 5.6, 0, -6.55671e-08, 5.17096, 27.437, -143.958)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall10/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall11" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(-2.44784e-07, 0, -1.5, 0, 1.5, 0, 5.6, 0, -6.55671e-08, -10.9248, 27.437, -143.958)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall11/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall24" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(-2.84124e-07, -3.02367, -1.11093, 1.53951e-14, 3.33278, -1.00789, 6.5, -1.32169e-07, -4.85601e-08, 6.04976, 32.0407, -147.334)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall24/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="wall25" parent="LevelTemplate" instance=ExtResource("4_6l8ns")]
+transform = Transform3D(-2.84124e-07, 3.02274, 1.11121, 0, 3.33362, -1.00758, -6.5, -1.32128e-07, -4.85724e-08, -11.6173, 32.019, -95.284)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/wall25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2787, 0.0965004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/wall25/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30508, 1.40794, 0.00158691)
+shape = SubResource("BoxShape3D_fybvg")
+
+[node name="anthill2" parent="LevelTemplate" instance=ExtResource("5_hwfxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.44514, 26.7089, -116.7)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LevelTemplate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.2562, 296.733, -14.1199)
+material_override = SubResource("StandardMaterial3D_6e5of")
+material_overlay = SubResource("StandardMaterial3D_35gq8")
+use_collision = true
+flip_faces = true
+size = Vector3(1000, 1000, 1000)
+material = SubResource("StandardMaterial3D_y50db")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="LevelTemplate"]
+transform = Transform3D(0.592378, 0.781136, 0.197268, 0.395261, -0.495137, 0.773698, 0.702038, -0.380349, -0.602061, -775.746, 121.681, 586.063)
+light_indirect_energy = 4.048
+light_volumetric_fog_energy = 4.81
+light_angular_distance = 71.14
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="LevelTemplate"]
+transform = Transform3D(-0.170848, -0.32281, -0.930916, -0.985202, 0.0691427, 0.156834, 0.0137385, 0.943935, -0.329846, 64.2688, 131.232, -113.57)
+light_indirect_energy = 4.048
+light_volumetric_fog_energy = 4.81
+light_angular_distance = 71.14
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="LevelTemplate"]
+transform = Transform3D(-0.237834, 0.132678, 0.962201, 0.101417, 0.988604, -0.111251, -0.965997, 0.0711242, -0.248579, -239.911, 64.1909, -131.861)
+light_indirect_energy = 4.048
+light_volumetric_fog_energy = 4.81
+light_angular_distance = 71.14
+
+[node name="DirectionalLight3D5" type="DirectionalLight3D" parent="LevelTemplate"]
+transform = Transform3D(-0.856389, 0.132678, 0.498993, 0.150469, 0.988604, -0.00462215, -0.49392, 0.0711243, -0.866594, 24.2434, 180.641, 12.9961)
+light_indirect_energy = 4.048
+light_volumetric_fog_energy = 4.81
+light_angular_distance = 71.14
+
+[node name="DirectionalLight3D6" type="DirectionalLight3D" parent="LevelTemplate"]
+transform = Transform3D(0.863502, -0.302723, 0.40339, 0.461159, 0.79775, -0.388493, -0.204198, 0.521491, 0.828463, -1513.19, 1433.43, -847.885)
+light_indirect_energy = 4.048
+light_volumetric_fog_energy = 4.81
+light_angular_distance = 71.14
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60.3178, 32.4039)
+
+[editable path="LevelTemplate"]
+[editable path="LevelTemplate/Human"]
+[editable path="LevelTemplate/Human/ego"]
