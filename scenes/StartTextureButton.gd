@@ -10,7 +10,7 @@ func _button_pressed():
 	get_parent().get_parent().get_node("AudioStreamPlayer").stop()
 	get_parent().get_parent().get_node("Loading").visible = true
 	await get_tree().create_timer(1).timeout 
-	get_tree().change_scene_to_file("res://scenes/lauri.tscn")
+	get_tree().change_scene_to_file("res://scenes/borb.tscn")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
