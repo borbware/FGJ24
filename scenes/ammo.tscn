@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0kyag8eaiisp"]
+[gd_scene load_steps=2 format=3 uid="uid://7kritup8i3gb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lwqdp"]
 radius = 0.2
