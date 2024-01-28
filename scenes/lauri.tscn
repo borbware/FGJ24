@@ -36,6 +36,7 @@ albedo_texture = ExtResource("6_nxnfw")
 
 [node name="Kiuasbody" parent="." instance=ExtResource("1_ahaqf")]
 transform = Transform3D(2.485, 0, 0, 0, 2.485, 0, 0, 0, 2.485, -5.21218, 27.5844, -131.58)
+nextLevel = "res://scenes/lauri2.tscn"
 
 [node name="LevelTemplate" parent="." instance=ExtResource("1_iu1dw")]
 
@@ -97,9 +98,9 @@ body_offset = Transform3D(1.00003, 5.06639e-07, 1.05165e-05, 0.000204485, 3.9011
 
 [node name="Physical Bone DEF-forearm_L" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="37"]
 transform = Transform3D(-0.51037, -0.240858, -0.82582, -0.833133, -0.100191, 0.544155, -0.213756, 0.965521, -0.149529, 0.497432, 1.41259, -0.0792012)
-joint_offset = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.000351321, 0.000617433, 0.0666758)
+joint_offset = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.000351319, 0.000617432, 0.0666758)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1.00014, 1.69426e-05, 3.4716e-05, -4.86746e-05, 2.28882e-05, -1.00022, -3.65078e-06, 1.00014, 3.55095e-05, 0.000349045, 0.0666904, -0.000619888)
+body_offset = Transform3D(1.00014, 1.69426e-05, 3.46825e-05, -4.86746e-05, 2.28882e-05, -1.00022, -3.65078e-06, 1.00014, 3.55244e-05, 0.000349045, 0.0666904, -0.000619888)
 
 [node name="Physical Bone DEF-forearm_L_001" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="38"]
 transform = Transform3D(-0.510157, -0.241081, -0.824806, -0.833029, -0.0995774, 0.543508, -0.213698, 0.964287, -0.149385, 0.605074, 1.34152, -0.0591393)
@@ -108,10 +109,10 @@ joint_rotation = Vector3(1.5708, 0, 0)
 body_offset = Transform3D(0.999932, -0.000117302, 2.51606e-05, 7.89128e-05, -0.00067921, -0.99901, -8.49366e-06, 0.998942, -4.81308e-06, 0.000335693, 0.0658073, -5.91278e-05)
 
 [node name="Physical Bone DEF-shoulder_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="39"]
-transform = Transform3D(0.473947, 0.0863719, 0.880875, -0.357069, 0.928605, 0.102005, -0.805083, -0.360932, 0.476903, -0.107279, 1.99704, 0.0205135)
-joint_offset = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.143678, -0.373449, 0.0603251)
+transform = Transform3D(0.473947, 0.0863719, 0.880875, -0.357069, 0.928605, 0.102005, -0.805083, -0.360932, 0.476903, -0.1073, 2.02921, 0.0205135)
+joint_offset = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.15516, -0.403323, 0.0571004)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(0.934203, 0.354951, 0.0356565, -3.26931e-05, 0.108054, -1.00111, -0.357138, 0.928641, 0.101431, -0.00381899, 0.100749, 0.391994)
+body_offset = Transform3D(0.934203, 0.354951, 0.0356565, -3.26931e-05, 0.108054, -1.00111, -0.357138, 0.928641, 0.101431, -0.00382757, 0.100749, 0.424164)
 
 [node name="Physical Bone DEF-upper_arm_R" parent="LevelTemplate/Human/ego/ego_rig/Skeleton3D" index="40"]
 transform = Transform3D(-0.508465, -0.0780645, 0.856502, 0.83099, -0.292359, 0.469677, 0.211742, 0.953159, 0.214214, -0.256965, 1.55068, -0.0421114)
@@ -272,28 +273,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
 [node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D10"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D10/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_aphk0")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="LevelTemplate"]
-transform = Transform3D(0.00245057, -0.00122823, 4.28499, -1.40409, 0.70368, 0.00747871, -0.527761, -1.87212, -1.87303e-07, 2.86538, 18.7964, -20.0964)
-mesh = SubResource("BoxMesh_qyxic")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D7"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D7/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_aphk0")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="LevelTemplate"]
-transform = Transform3D(0.00245057, -0.00122823, 4.67499, -1.40409, 0.70368, 0.00815938, -0.527761, -1.87212, -2.0435e-07, -2.51003, 24.5156, -35.337)
-mesh = SubResource("BoxMesh_qyxic")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_lray0")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="LevelTemplate/MeshInstance3D8"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTemplate/MeshInstance3D8/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aphk0")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="LevelTemplate"]
