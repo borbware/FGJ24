@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://brw8pstvranw5"]
+
+[ext_resource type="PackedScene" uid="uid://7kritup8i3gb" path="res://scenes/ammo.tscn" id="1_uin2u"]
+[ext_resource type="PackedScene" uid="uid://c2ej25lg2v408" path="res://assets/kalusteet/oven.glb" id="2_ygqnw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rqvgx"]
+
+[node name="Ammo" instance=ExtResource("1_uin2u")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.525, 0, 0, 0, 1, 0.025, 1.68, -0.005)
+shape = SubResource("CylinderShape3D_rqvgx")
+
+[node name="oven2" parent="." index="2" instance=ExtResource("2_ygqnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27, 0, -1.84)

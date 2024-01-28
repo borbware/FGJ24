@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://de13ysykvb3ef"]
+
+[ext_resource type="PackedScene" uid="uid://7kritup8i3gb" path="res://scenes/ammo.tscn" id="1_f85sy"]
+[ext_resource type="PackedScene" uid="uid://bo6vsh0b1vx25" path="res://assets/kalusteet/bottle.glb" id="2_abjhs"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pany4"]
+
+[node name="Ammo" instance=ExtResource("1_f85sy")]
+transform = Transform3D(1.705, 0, 0, 0, 1.705, 0, 0, 0, 1.705, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.47, 0, 0, 0, 0.515, 0, 0, 0, 0.47, 0, 0.08, 0)
+shape = SubResource("CylinderShape3D_pany4")
+
+[node name="bottle2" parent="." index="2" instance=ExtResource("2_abjhs")]
+transform = Transform3D(2.405, 0, 0, 0, 2.405, 0, 0, 0, 2.405, 3.45, -0.445, -2.79)
