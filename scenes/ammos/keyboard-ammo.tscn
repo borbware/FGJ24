@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c026blyvi8jk6"]
+
+[ext_resource type="PackedScene" uid="uid://7kritup8i3gb" path="res://scenes/ammo.tscn" id="1_4swg8"]
+[ext_resource type="PackedScene" uid="uid://bmrhj8fnyue8q" path="res://assets/kalusteet v2/c69.glb" id="2_4uyxu"]
+
+[node name="Ammo" instance=ExtResource("1_4swg8")]
+
+[node name="c692" parent="." index="2" instance=ExtResource("2_4uyxu")]
+transform = Transform3D(2.795, 0, 0, 0, 2.795, 0, 0, 0, 2.795, -2.43163, 0, -7.90506)
