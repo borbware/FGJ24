@@ -11,9 +11,21 @@ func _process(delta):
 	pass
 
 
-func _on_area_3d_area_entered(area):
-	var object = area.get_parent()
-	print(object)
-	if object.is_in_group("Player"):
-		var nextScene = preload("res://scenes/title_screen.tscn")
-		get_tree().change_scene(nextScene)
+func _on_area_3d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	pass
+	#var object = area.get_parent()
+	#print(object)
+	#if object.is_in_group("Player"):
+		#var nextScene = preload("res://scenes/title_screen.tscn")
+		#get_tree().change_scene(nextScene)
+#
+
+
+func _on_area_3d_body_entered(body):
+	var object = body.get_parent()
+	print(body)
+	if body.is_in_group("Player"):
+		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+
+
+

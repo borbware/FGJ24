@@ -104,7 +104,7 @@ script = ExtResource("1_x1uf0")
 
 [node name="ego" parent="." instance=ExtResource("1_kvlsk")]
 
-[node name="Physical Bone DEF-spine" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="26"]
+[node name="Physical Bone DEF-spine" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="26" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, -0.249639, -0.968339, 0, 0.968339, -0.249639, 0, 1.0836, -0.0361999)
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26014e-07, 0.0761098)
 body_offset = Transform3D(1, 0, 0, 0, 8.9407e-08, -1, 0, 1, 8.9407e-08, 0, 0.0761098, 1.19209e-07)
@@ -114,12 +114,12 @@ bone_name = "DEF-spine"
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_2imls")
 
-[node name="Physical Bone DEF-spine_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="27"]
-transform = Transform3D(1, 0, 0, 0, -0.122954, -0.992416, 0, 0.992416, -0.122954, 0, 1.2251, -0.00879976)
+[node name="Physical Bone DEF-spine_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="27" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -0.122954, -0.992416, 0, 0.992416, -0.122954, 0, 1.2251, -0.00879975)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999997, 0, 0.999997, -3.61998e-06, 0, -2.45544e-07, 0.0683182)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999997, 0, 0.999997, -3.61998e-06, 0, -2.60954e-07, 0.0683182)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 1.04308e-07, 0, 0.0683185, 2.38419e-07)
+body_offset = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 1.11759e-07, 0, 0.0683185, 2.5332e-07)
 bone_name = "DEF-spine.001"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -132,12 +132,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ghdkl")
 
-[node name="Physical Bone DEF-spine_002" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="28"]
+[node name="Physical Bone DEF-spine_002" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="28" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 0.0318151, -0.999588, 0, 0.999588, 0.0318152, 0, 1.37924, -0.00314422)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -3.89736e-06, 0.0863769)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -3.90482e-06, 0.0863769)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, -5.36442e-07, -1.00009, 0, 1.00009, -4.61936e-07, 0, 0.086385, 3.93763e-06)
+body_offset = Transform3D(1, 0, 0, 0, -5.36442e-07, -1.00009, 0, 1.00009, -4.61936e-07, 0, 0.086385, 3.94508e-06)
 bone_name = "DEF-spine.002"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -150,7 +150,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_hxdkl")
 
-[node name="Physical Bone DEF-spine_003" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="29"]
+[node name="Physical Bone DEF-spine_003" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="29" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 0.0285599, -0.999519, 0, 0.999592, 0.0285608, 0, 1.56191, -0.00864743)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -1.80992e-06, 0.0962578)
@@ -168,7 +168,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_jmgkp")
 
-[node name="Physical Bone DEF-spine_004" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="30"]
+[node name="Physical Bone DEF-spine_004" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="30" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, -0.368782, -0.929515, 0, 0.929515, -0.368782, 0, 1.68895, 0.000799493)
 joint_type = 3
 joint_offset = Transform3D(0.999999, 0, 0, 0, -3.61999e-06, -1, 0, 0.999999, -3.61999e-06, 0, 3.83712e-07, 0.0330815)
@@ -186,7 +186,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_s4khx")
 
-[node name="Physical Bone DEF-spine_005" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="31"]
+[node name="Physical Bone DEF-spine_005" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="31" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, -0.186599, -0.982436, 0, 0.982436, -0.186599, 0, 1.7505, 0.0188498)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 1.30421e-07, 0.0313506)
@@ -204,12 +204,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 2.98023e-08, 0, -0.0214452, -0.112908)
 shape = SubResource("CapsuleShape3D_mbmrl")
 
-[node name="Physical Bone DEF-shoulder_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="32"]
-transform = Transform3D(0.473901, -0.0863692, -0.878307, 0.35705, 0.928589, 0.101638, 0.805029, -0.36092, 0.473561, 0.107034, 1.60108, 0.0204895)
+[node name="Physical Bone DEF-shoulder_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="32" groups=["Player"]]
+transform = Transform3D(0.473901, -0.0863692, -0.878886, 0.35705, 0.928589, 0.101661, 0.805029, -0.36092, 0.474151, 0.107035, 1.60108, 0.020489)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999996, 0, 0.999996, -3.61998e-06, -0.00217417, -0.00582362, 0.100428)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61998e-06, -0.999996, 0, 0.999996, -3.61998e-06, -0.00219482, -0.00580958, 0.10035)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(0.934133, -0.354939, -0.0372347, 2.10404e-05, 0.10805, -0.997203, 0.357119, 0.928625, 0.101066, 0.00370335, 0.100777, -0.0039655)
+body_offset = Transform3D(0.934133, -0.354939, -0.0370202, 2.10404e-05, 0.10805, -0.998001, 0.357119, 0.928625, 0.101088, 0.00370318, 0.100777, -0.0039655)
 bone_name = "DEF-shoulder.L"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -222,7 +222,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ngwcv")
 
-[node name="Physical Bone DEF-upper_arm_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="33"]
+[node name="Physical Bone DEF-upper_arm_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="33" groups=["Player"]]
 transform = Transform3D(-0.510259, 0.0780689, -0.85647, -0.833043, -0.292341, 0.469655, -0.213715, 0.953122, 0.214204, 0.257078, 1.55072, -0.0421526)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 9.80007e-07, 2.16912e-06, 0.0721308)
@@ -240,12 +240,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_5t2gl")
 
-[node name="Physical Bone DEF-upper_arm_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="34"]
-transform = Transform3D(-0.510253, 0.0780691, -0.856471, -0.833041, -0.292341, 0.469654, -0.213719, 0.953122, 0.214205, 0.380625, 1.48297, -0.0730502)
+[node name="Physical Bone DEF-upper_arm_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="34" groups=["Player"]]
+transform = Transform3D(-0.510248, 0.0780691, -0.856471, -0.833039, -0.292341, 0.469654, -0.213721, 0.953122, 0.214205, 0.380625, 1.48297, -0.0730502)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -7.06673e-08, -2.82362e-08, 0.0721275)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -7.06675e-08, -2.82364e-08, 0.0721275)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(0.999996, -1.49012e-08, 9.79751e-07, 4.58583e-06, 2.08616e-07, -1, -3.05474e-06, 1, 8.04663e-07, 0, 0.0721275, -2.98023e-08)
+body_offset = Transform3D(0.999992, -1.49012e-08, 9.79751e-07, 8.58679e-06, 2.08616e-07, -1, -5.99027e-06, 1, 8.04663e-07, 0, 0.0721275, -2.98023e-08)
 bone_name = "DEF-upper_arm.L.001"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -258,7 +258,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_g363p")
 
-[node name="Physical Bone DEF-forearm_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="35"]
+[node name="Physical Bone DEF-forearm_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="35" groups=["Player"]]
 transform = Transform3D(-0.510259, -0.240835, -0.825612, -0.833043, -0.10015, 0.544067, -0.213715, 0.965385, -0.149523, 0.49665, 1.41335, -0.078675)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -1.5911e-08, -1.34325e-07, 0.0657089)
@@ -276,7 +276,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_mu44l")
 
-[node name="Physical Bone DEF-forearm_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="36"]
+[node name="Physical Bone DEF-forearm_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="36" groups=["Player"]]
 transform = Transform3D(-0.510255, -0.240835, -0.825611, -0.833043, -0.100151, 0.544067, -0.213715, 0.965385, -0.149524, 0.60515, 1.34185, -0.0590256)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -1.07191e-06, 3.21522e-07, 0.0657093)
@@ -294,12 +294,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_st6sa")
 
-[node name="Physical Bone DEF-shoulder_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="37"]
-transform = Transform3D(0.473901, 0.0863692, 0.878307, -0.35705, 0.928589, 0.101638, -0.805029, -0.36092, 0.473561, -0.107034, 1.60108, 0.0204895)
+[node name="Physical Bone DEF-shoulder_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="37" groups=["Player"]]
+transform = Transform3D(0.473901, 0.0863692, 0.878886, -0.35705, 0.928589, 0.101661, -0.805029, -0.36092, 0.474151, -0.107035, 1.60108, 0.020489)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00217417, -0.00582362, 0.100428)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0.00219482, -0.00580958, 0.10035)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(0.934133, 0.354939, 0.0372347, -2.10404e-05, 0.10805, -0.997203, -0.357119, 0.928625, 0.101066, -0.00370335, 0.100777, -0.0039655)
+body_offset = Transform3D(0.934133, 0.354939, 0.0370202, -2.10404e-05, 0.10805, -0.998001, -0.357119, 0.928625, 0.101088, -0.00370318, 0.100777, -0.0039655)
 bone_name = "DEF-shoulder.R"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -312,7 +312,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_btuyv")
 
-[node name="Physical Bone DEF-upper_arm_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="38"]
+[node name="Physical Bone DEF-upper_arm_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="38" groups=["Player"]]
 transform = Transform3D(-0.510259, -0.0780689, 0.85647, 0.833043, -0.292341, 0.469655, 0.213715, 0.953122, 0.214204, -0.257078, 1.55072, -0.0421526)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -9.80007e-07, 2.16912e-06, 0.0721308)
@@ -330,12 +330,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_7k0rg")
 
-[node name="Physical Bone DEF-upper_arm_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="39"]
-transform = Transform3D(-0.510253, -0.0780691, 0.856471, 0.833041, -0.292341, 0.469654, 0.213719, 0.953122, 0.214205, -0.380625, 1.48297, -0.0730502)
+[node name="Physical Bone DEF-upper_arm_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="39" groups=["Player"]]
+transform = Transform3D(-0.510248, -0.0780691, 0.856471, 0.833039, -0.292341, 0.469654, 0.213721, 0.953122, 0.214205, -0.380625, 1.48297, -0.0730502)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 7.06673e-08, -2.82362e-08, 0.0721275)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 7.06675e-08, -2.82364e-08, 0.0721275)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(0.999996, 1.49012e-08, -9.79751e-07, -4.58583e-06, 2.08616e-07, -1, 3.05474e-06, 1, 8.04663e-07, 0, 0.0721275, -2.98023e-08)
+body_offset = Transform3D(0.999992, 1.49012e-08, -9.79751e-07, -8.58679e-06, 2.08616e-07, -1, 5.99027e-06, 1, 8.04663e-07, 0, 0.0721275, -2.98023e-08)
 bone_name = "DEF-upper_arm.R.001"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -348,7 +348,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_56b8u")
 
-[node name="Physical Bone DEF-forearm_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="40"]
+[node name="Physical Bone DEF-forearm_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="40" groups=["Player"]]
 transform = Transform3D(-0.510259, 0.240835, 0.825612, 0.833043, -0.10015, 0.544067, 0.213715, 0.965385, -0.149523, -0.49665, 1.41335, -0.078675)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 1.5911e-08, -1.34325e-07, 0.0657089)
@@ -366,7 +366,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_1rtwr")
 
-[node name="Physical Bone DEF-forearm_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="41"]
+[node name="Physical Bone DEF-forearm_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="41" groups=["Player"]]
 transform = Transform3D(-0.510255, 0.240835, 0.825611, 0.833043, -0.100151, 0.544067, 0.213715, 0.965385, -0.149524, -0.60515, 1.34185, -0.0590256)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 1.07191e-06, 3.21522e-07, 0.0657093)
@@ -384,12 +384,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_seyjh")
 
-[node name="Physical Bone DEF-thigh_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="42"]
-transform = Transform3D(1, 0, 0, 0, -0.0764403, 0.997077, 0, -0.997074, -0.0764405, 0.098, 0.9383, -0.00214994)
+[node name="Physical Bone DEF-thigh_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="42" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -0.0764402, 0.997077, 0, -0.997074, -0.0764404, 0.098, 0.9383, -0.00214994)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 1.79831e-08, 0.134092)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 2.29783e-08, 0.134092)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, -1.3411e-07, -1, 0, 1, -1.3411e-07, 0, 0.134092, 0)
+body_offset = Transform3D(1, 0, 0, 0, -1.71363e-07, -1, 0, 1, -1.71363e-07, 0, 0.134092, 0)
 bone_name = "DEF-thigh.L"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 90.0
@@ -402,12 +402,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_anvmy")
 
-[node name="Physical Bone DEF-thigh_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="43"]
-transform = Transform3D(1, 0, 0, 0, -0.0764403, 0.997077, 0, -0.997074, -0.0764405, 0.098, 0.6709, 0.0183497)
+[node name="Physical Bone DEF-thigh_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="43" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -0.0764402, 0.997077, 0, -0.997074, -0.0764404, 0.098, 0.6709, 0.0183497)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -4.72755e-07, 0.134092)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -4.6776e-07, 0.134092)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, -1.41561e-07, -1, 0, 1, -1.41561e-07, 0, 0.134092, 4.91738e-07)
+body_offset = Transform3D(1, 0, 0, 0, -1.78814e-07, -1, 0, 1, -1.78814e-07, 0, 0.134092, 4.91738e-07)
 bone_name = "DEF-thigh.L.001"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -420,7 +420,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ls2yk")
 
-[node name="Physical Bone DEF-shin_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="44"]
+[node name="Physical Bone DEF-shin_L" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="44" groups=["Player"]]
 transform = Transform3D(1, -2.01799e-16, 3.28064e-08, -3.26464e-08, 0.0986319, 0.995124, -3.23574e-09, -0.995121, 0.0986312, 0.098, 0.4242, 0.0174004)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 3.72528e-09, 2.87925e-09, 0.113554)
@@ -438,7 +438,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_66a06")
 
-[node name="Physical Bone DEF-shin_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="45"]
+[node name="Physical Bone DEF-shin_L_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="45" groups=["Player"]]
 transform = Transform3D(1, -1.34533e-16, 3.28064e-08, -3.26467e-08, 0.0986319, 0.995124, -3.23576e-09, -0.995121, 0.0986312, 0.098, 0.198186, -0.0050009)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -3.72576e-09, -8.46148e-10, 0.113568)
@@ -456,12 +456,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_8qjp3")
 
-[node name="Physical Bone DEF-thigh_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="46"]
-transform = Transform3D(1, 0, 0, 0, -0.0764403, 0.997077, 0, -0.997074, -0.0764405, -0.098, 0.9383, -0.00214994)
+[node name="Physical Bone DEF-thigh_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="46" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -0.0764402, 0.997077, 0, -0.997074, -0.0764404, -0.098, 0.9383, -0.00214994)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 1.79831e-08, 0.134092)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 2.29783e-08, 0.134092)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, -1.3411e-07, -1, 0, 1, -1.3411e-07, 0, 0.134092, 0)
+body_offset = Transform3D(1, 0, 0, 0, -1.71363e-07, -1, 0, 1, -1.71363e-07, 0, 0.134092, 0)
 bone_name = "DEF-thigh.R"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 90.0
@@ -474,12 +474,12 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_a1i5c")
 
-[node name="Physical Bone DEF-thigh_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="47"]
-transform = Transform3D(1, 0, 0, 0, -0.0764403, 0.997077, 0, -0.997074, -0.0764405, -0.098, 0.6709, 0.0183497)
+[node name="Physical Bone DEF-thigh_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="47" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, -0.0764402, 0.997077, 0, -0.997074, -0.0764404, -0.098, 0.6709, 0.0183497)
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -4.72755e-07, 0.134092)
+joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, -4.6776e-07, 0.134092)
 joint_rotation = Vector3(1.5708, 0, 0)
-body_offset = Transform3D(1, 0, 0, 0, -1.41561e-07, -1, 0, 1, -1.41561e-07, 0, 0.134092, 4.91738e-07)
+body_offset = Transform3D(1, 0, 0, 0, -1.78814e-07, -1, 0, 1, -1.78814e-07, 0, 0.134092, 4.91738e-07)
 bone_name = "DEF-thigh.R.001"
 joint_constraints/angular_limit_enabled = true
 joint_constraints/angular_limit_upper = 30.0
@@ -492,7 +492,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_jnoc2")
 
-[node name="Physical Bone DEF-shin_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="48"]
+[node name="Physical Bone DEF-shin_R" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="48" groups=["Player"]]
 transform = Transform3D(1, 2.01799e-16, -3.28064e-08, 3.26464e-08, 0.0986319, 0.995124, 3.23574e-09, -0.995121, 0.0986312, -0.098, 0.4242, 0.0174004)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, -3.72528e-09, 2.87925e-09, 0.113554)
@@ -510,7 +510,7 @@ joint_constraints/angular_limit_relaxation = 1.0
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_gyslr")
 
-[node name="Physical Bone DEF-shin_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="49"]
+[node name="Physical Bone DEF-shin_R_001" type="PhysicalBone3D" parent="ego/ego_rig/Skeleton3D" index="49" groups=["Player"]]
 transform = Transform3D(1, 1.34533e-16, -3.28064e-08, 3.26467e-08, 0.0986319, 0.995124, 3.23576e-09, -0.995121, 0.0986312, -0.098, 0.198186, -0.0050009)
 joint_type = 3
 joint_offset = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 3.72576e-09, -8.46148e-10, 0.113568)

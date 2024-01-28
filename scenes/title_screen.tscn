@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5gcpygm627qs"]
+[gd_scene load_steps=7 format=3 uid="uid://cta2x4yqj60gc"]
 
 [ext_resource type="Texture2D" uid="uid://do83rb4y0nct7" path="res://assets/title-screen/loading.png" id="1_8rsmy"]
 [ext_resource type="Script" path="res://scenes/StartTextureButton.gd" id="1_63ab8"]
