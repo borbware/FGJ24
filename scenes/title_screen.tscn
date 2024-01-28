@@ -1,19 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://cta2x4yqj60gc"]
+[gd_scene load_steps=9 format=3 uid="uid://cta2x4yqj60gc"]
 
+[ext_resource type="Texture2D" uid="uid://cuw5qjsah3sre" path="res://assets/4622b3ef-6a7c-4cb5-ba2b-172bf1008979.jpg" id="1_7x8ym"]
 [ext_resource type="Texture2D" uid="uid://do83rb4y0nct7" path="res://assets/title-screen/loading.png" id="1_8rsmy"]
 [ext_resource type="Script" path="res://scenes/StartTextureButton.gd" id="1_63ab8"]
-[ext_resource type="Texture2D" uid="uid://dae7d2h3tetvx" path="res://assets/title-screen/name.png" id="1_mbgha"]
 [ext_resource type="Texture2D" uid="uid://dasrdtos0nbwx" path="res://assets/title-screen/start.png" id="2_0bouj"]
 [ext_resource type="AudioStream" uid="uid://bg7tm1hajmcia" path="res://assets/sound-fx/FGJ24-startgame-v1.mp3" id="3_ivg8v"]
 [ext_resource type="Texture2D" uid="uid://cd2atuhxc0exj" path="res://assets/title-screen/quit.png" id="3_tav55"]
 [ext_resource type="AudioStream" uid="uid://7npudlyoekfd" path="res://assets/music/FGJ24-intro-v1.mp3" id="7_0ed42"]
+[ext_resource type="Texture2D" uid="uid://b4utp3kfk3wnl" path="res://assets/title-screen/name2.png" id="8_1vmad"]
 
 [node name="TitleScreen" type="Node2D"]
 
-[node name="Name" type="Sprite2D" parent="."]
-position = Vector2(580, 177)
-scale = Vector2(0.723081, 0.723081)
-texture = ExtResource("1_mbgha")
+[node name="4622b3Ef-6a7c-4Cb5-ba2b-172Bf1008979" type="Sprite2D" parent="."]
+self_modulate = Color(0.211765, 0.278431, 0.278431, 1)
+light_mask = 3
+position = Vector2(573.5, 330)
+scale = Vector2(2.38867, 1.32812)
+texture = ExtResource("1_7x8ym")
 
 [node name="Quit" type="Sprite2D" parent="."]
 position = Vector2(1000, 552)
@@ -40,9 +43,15 @@ stream = ExtResource("3_ivg8v")
 
 [node name="Loading" type="Sprite2D" parent="."]
 visible = false
+top_level = true
 position = Vector2(587, 323)
 texture = ExtResource("1_8rsmy")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0ed42")
 autoplay = true
+
+[node name="Name2" type="Sprite2D" parent="."]
+position = Vector2(621.222, 272.25)
+scale = Vector2(0.497685, 0.497685)
+texture = ExtResource("8_1vmad")
