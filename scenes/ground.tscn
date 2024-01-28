@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh7ej8uv6rxsp"]
+[gd_scene load_steps=6 format=3 uid="uid://bh7ej8uv6rxsp"]
 
 [ext_resource type="Script" path="res://scenes/ground.gd" id="1_3k04r"]
+[ext_resource type="AudioStream" uid="uid://bwhlf6m7b28ht" path="res://assets/sound-fx/FGJ24-fail-v1.mp3" id="2_agbye"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kinfe"]
+albedo_color = Color(0.384314, 0.168627, 0.0235294, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ke2f0"]
 size = Vector3(100, 1, 100)
@@ -14,6 +18,7 @@ script = ExtResource("1_3k04r")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_kinfe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ke2f0")
@@ -22,5 +27,8 @@ shape = SubResource("BoxShape3D_ke2f0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_3ou86")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_agbye")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

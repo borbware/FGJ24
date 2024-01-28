@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var ammo_prefab : PackedScene
+@export var ammo_prefabs: Array[PackedScene] = []
 
 @export var force: float
 @export var rotate_ground_speed: float
@@ -9,6 +10,10 @@ extends Node3D
 
 var rotation_x: float;
 var rotation_y: float;
+var current_ammo = 0
+
+@export_group("Assets")
+@export var hurt_noises: Array[AudioStreamWAV]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,10 +23,15 @@ func _ready():
 
 
 func shoot():
-	var ammo = ammo_prefab.instantiate()
+	var Audiostream = get_node("AudioStreamPlayer")
+	Audiostream.stream = hurt_noises.pick_random()
+	Audiostream.play()
+	var ammo = ammo_prefabs[current_ammo%ammo_prefabs.size()].instantiate()
 	get_parent().get_node("Ammos").add_child(ammo)
 	ammo.global_position = $Tykki/AmmoSpawn.global_position
 	ammo.apply_impulse(-$Tykki.get_global_transform().basis.z * force)
+	current_ammo+=1
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
