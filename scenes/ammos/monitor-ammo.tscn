@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://do51ec1djj28l"]
+
+[ext_resource type="PackedScene" path="res://scenes/ammo.tscn" id="1_aktl6"]
+[ext_resource type="PackedScene" uid="uid://cg3et0wepfbcs" path="res://assets/kalusteet v2/monitor.glb" id="2_eg7rc"]
+
+[node name="Ammo" instance=ExtResource("1_aktl6")]
+
+[node name="monitor2" parent="." index="2" instance=ExtResource("2_eg7rc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.07169, -0.666377, -4.35145)
